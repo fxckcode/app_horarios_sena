@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import DropMenu from '../components/DropMenu/DropMenu'
 import Hero from '../components/Hero/Hero'
-
+import axios from 'axios';
 function HomePage() {
     // const [user, setUser] = useState(null);
 
@@ -15,11 +15,22 @@ function HomePage() {
     //         .then(response => response.json())
     //         .then(data => setUser(data))
     //         .catch(error => console.error(error))
-    // }, []);    
+    // }, []);
+
+
+    const [home, setHome] = useState([])
+
+    useEffect(() => {
+        const getHome = async () => {
+            const apiHome = await axios.get('http://127.0.0.1:8000/api/home')
+            setHome(apiHome.data)
+        }
+        getHome();
+    }, [])
 
     return (
         <>
-            <DropMenu />
+            <DropMenu user={home} />
             <Hero />
         </>
     )

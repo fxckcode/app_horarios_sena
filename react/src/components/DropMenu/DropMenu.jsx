@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBell, faChevronUp, faUser } from '@fortawesome/free-solid-svg-icons'
 import './DropMenu.scss'
 
-function DropMenu({typeUser = 'ADMIN'}) {
+function DropMenu({user}) {
 
     const getIcon = (iconName) => {
         switch (iconName) {
@@ -71,7 +71,7 @@ function DropMenu({typeUser = 'ADMIN'}) {
                         </li>
                         <li className='profile'>
                             <FontAwesomeIcon icon={faUser} />
-                            <p>Nombre de usuario</p>
+                            <p>{user.nombres}</p>
                             <FontAwesomeIcon icon={faChevronUp} />
                             <ul className='submenu'>
                                 <li>

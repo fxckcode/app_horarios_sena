@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import './Hero.scss'
 
 function Hero() {
@@ -7,7 +8,7 @@ function Hero() {
             <div className="cards">
                 <div>
                     <h2>Instrutores de planta</h2>
-                    <p>1</p>
+                    <p></p>
                 </div>
                 <div>
                     <h2>Instructores contratistas</h2>
