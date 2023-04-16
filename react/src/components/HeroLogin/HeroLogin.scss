@@ -1,0 +1,109 @@
+$color-sena: #027f02;
+$input-color: #e0e0e0;
+
+.hero {
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    padding: 30px;
+    box-shadow: 0.5em 0.75em 0.75em 0.5em rgba($color: #000000, $alpha: 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & > h2 {
+        color: $color-sena;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+
+    & > label {
+        font-size: 14px;
+    }
+
+    & > button {
+        width: fit-content;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: $color-sena;
+        color: white;
+        border: none;
+        margin: 0 auto;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #025902;
+            transition: .5s all;
+        }
+    }
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+    gap: 5px; 
+    padding-bottom: 15px;
+    & > svg {
+        padding: 12px;
+        border-radius: 5px;
+        background-color: $color-sena;
+        color: white;
+    }
+}
+
+.viewPassword {
+    display: flex;
+    gap: 5px;
+    padding-bottom: 5px;
+}
+
+#identificacion, #password {
+    width: 100%;
+    padding: 10px 15px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: $input-color;
+}
+
+::placeholder {
+    color: gray;
+}
+
+input:focus {
+    color: gray;
+    border: 1px solid gray;
+}
+
+.null-pass {
+    text-align: right;
+    margin-bottom: 10px;
+    & > a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        padding: 25px;
+    }
+
+    .login > svg {
+        display: none;
+    }
+
+    form {
+        width: 250px;
+    }
+}
+
