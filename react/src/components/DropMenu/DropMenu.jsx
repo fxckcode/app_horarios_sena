@@ -71,7 +71,7 @@ function DropMenu({user}) {
                         </li>
                         <li className='profile'>
                             <FontAwesomeIcon icon={faUser} />
-                            <p>{user.nombres}</p>
+                            <p>{user.nombres} | {user.rol}</p>
                             <FontAwesomeIcon icon={faChevronUp} />
                             <ul className='submenu'>
                                 <li>
